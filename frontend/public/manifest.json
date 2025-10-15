@@ -1,0 +1,23 @@
+{
+  "short_name": "DigitalGuide",
+  "name": "Digital Guide - Learn Digital Services",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9U0vJ5kAAAAASUVORK5CYII=",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9U0vJ5kAAAAASUVORK5CYII=",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff"
+}
+
+
+

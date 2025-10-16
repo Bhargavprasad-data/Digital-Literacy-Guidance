@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaMoneyBillWave, FaBus, FaUtensils, FaChalkboardTeacher } from 'react-icons/fa';
+import { FaMoneyBillWave, FaBus, FaUtensils, FaChalkboardTeacher, FaGlobe, FaExternalLinkAlt } from 'react-icons/fa';
 import { speak, debugTeluguVoices, forceTeluguSpeech } from '../services/voice';
 import { useLanguage } from '../contexts/LanguageContext';
 import { messages } from '../i18n';
@@ -14,6 +14,19 @@ const BigButton = ({ to, icon: Icon, label, color }) => (
     <Icon size={48} className="mb-2" />
     <span>{label}</span>
   </Link>
+);
+
+const ExternalButton = ({ href, icon: Icon, label, color }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`rounded-2xl p-6 flex flex-col items-center justify-center text-white text-xl font-bold shadow-lg active:scale-95 transition-transform ${color}`}
+    aria-label={label}
+  >
+    <Icon size={48} className="mb-2" />
+    <span>{label}</span>
+  </a>
 );
 
 function Home() {
@@ -56,6 +69,9 @@ function Home() {
         <BigButton to="/book-tickets" icon={FaBus} label="Book Tickets" color="bg-green-600" />
         <BigButton to="/order-food" icon={FaUtensils} label="Order Food" color="bg-rose-600" />
         <BigButton to="/practice" icon={FaChalkboardTeacher} label="Learn/Practice" color="bg-accent" />
+        {/* External website shortcuts */}
+        <ExternalButton href="https://untie-aloha-43705113.figma.site" icon={FaGlobe} label="Open Google" color="bg-indigo-600"/>
+        <ExternalButton href="https://www.figma.com/make/E1oIqg1bsXtd1mz8zJZbmV/Create-SmartGuide-App?t=dIns9FPqJjZBNoxs-6" icon={FaExternalLinkAlt} label="Open YouTube" color="bg-amber-600" />
       </div>
     </div>
   );

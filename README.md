@@ -18,6 +18,16 @@ Core app
 - Home dashboard (`/home`) with quick links to Send Money, Book Tickets, Order Food, Learn/Practice, and History.
 - Top navigation with persistent language selector and logout.
 
+External website shortcuts on Home
+----------------------------------
+- Two external buttons are available on the Home grid below the core actions.
+- Location: `frontend/src/pages/Home.js` (component `ExternalButton`).
+- Current default links:
+  - `https://untie-aloha-43705113.figma.site`
+  - `https://www.figma.com/make/E1oIqg1bsXtd1mz8zJZbmV/Create-SmartGuide-App?t=dIns9FPqJjZBNoxs-6`
+- To customize, edit the `href`, `label`, `color`, or `icon` props of the two `ExternalButton` entries in `Home.js`.
+  - Keep `target="_blank"` and `rel="noopener noreferrer"` for security when linking externally.
+
 Authentication & preferences
 - Register/Login with JWT.
 - Remembered session via `localStorage` + token verification on app boot.
